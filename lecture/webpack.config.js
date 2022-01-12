@@ -15,13 +15,12 @@ module.exports = {
         rules: [{
             test: /\.tsx?$/,
             loader: 'awesome-typescript-loader',
-
-        }],
+        }]
     },
     plugins: [],
     output: {
         filename: 'app.js',
         path: path.join(__dirname, 'dist'),
         publicPath: '/dist',
-    }
+    },
 }
