@@ -6,8 +6,9 @@ import GuGuDan from './GuGuDan';
 import WordRelay from './WordRelay';
 import NumberBaseBall from './NumberBaseBall';
 import ResponseCheck from './ResponseCheck';
+import RSP from './RSP';
 
-const Hot = hot(ResponseCheck);
+const Hot = hot(RSP);
 
 
 ReactDOM.render(

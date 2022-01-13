@@ -4,7 +4,7 @@
   "discription": "",
   "main": "index.js",
   "scripts": {
-    "dev": " webpack serve --env development --hot"
+    "dev": "webpack serve --env development"
   },
   "author": "minwoo",
   "license": "MIT",
