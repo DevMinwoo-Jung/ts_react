@@ -7,10 +7,17 @@ import WordRelay from './WordRelay';
 import NumberBaseBall from './NumberBaseBall';
 import ResponseCheck from './ResponseCheck';
 import RSP from './RSP';
+import Lotto from './Lotto';
+import App from './App';
+import store from './store';
+import { Provider } from 'react-redux';
 
-const Hot = hot(RSP);
+const Hot = hot(App);
 
 
 ReactDOM.render(
-  <Hot />,document.querySelector('#root')
+  <Provider store={store}>
+    <Hot />
+  </Provider>
+  ,document.querySelector('#root')
 );
