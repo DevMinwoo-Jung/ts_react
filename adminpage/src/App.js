@@ -1,35 +1,21 @@
+import AddForm from "AddForm/AddForm";
 import "./App.css";
-
-import AdminPage from "AdminPage/AdminPage";
-import { Link, Route, Router } from "react-router-dom";
-import Home from "HomePage/Home";
+import { useSelector } from "react-redux";
+import PostLists from "PostLists/PostLists";
 
 function App() {
+  const state = useSelector((state) => state);
+
+  const postLists = [...state.addFormAction];
+
   return (
-    <>
-      {/* <Router>
-        <div>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/admin">Users</Link>
-            </li>
-          </ul>
-          <Route path="/admin">
-            <AdminPage />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </div>
-      </Router> */}
-      <div>초특가 야놀자</div>
-    </>
+    <div>
+      초특가 야놀자
+      <AddForm />
+      {postLists.map((post) => (
+        <PostLists key={post.id} post={post} />
+      ))}
+    </div>
   );
 }
 
